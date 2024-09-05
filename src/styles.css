@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+.btn-primary {
+  @apply bg-[#0147FF] text-white w-[158px] h-[48px] rounded-lg px-4;
+}
+.btn-primary:hover {
+  @apply bg-white text-[#0147FF] border border-[#0147FF];
+}
+
+.bg-primary {
+  @apply bg-[#f7f7f7];
+}
