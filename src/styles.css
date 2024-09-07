@@ -2,17 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* fonts */
-
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
-
 .btn-primary {
   @apply bg-[#0147FF] text-white w-[158px] h-[48px] rounded-lg px-4;
+  @apply font-roboto-flex text-[15px] font-semibold leading-[22.5px] tracking-[-0.02em] text-center;
 }
+
 .btn-primary:hover {
   @apply bg-white text-[#0147FF] border border-[#0147FF];
 }
 
-.bg-primary {
-  @apply bg-[#f7f7f7];
+.dot {
+  @apply w-2 h-2 rounded-full bg-[#EDEDED];
 }
