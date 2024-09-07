@@ -15,74 +15,114 @@
   <body class="bg-primary font-roboto-flex">
     <div class="max-w-[1440px] mx-auto relative">
       <header
-        class="navigation flex items-center justify-between px-[120px] h-20"
+        class="navigation flex items-center justify-between px-4 md:px-8 lg:px-[120px] h-20"
       >
-        <div class="logo"><img src="./assets/img/logo.svg" alt="logo" /></div>
-        <div class="menu">
-          <ul class="flex gap-[24px] cursor-pointer">
+        <div class="mobile-menu md:hidden flex items-center">
+          <button id="burger-btn" class="focus:outline-none">
+            <img
+              src="./assets/img/burger-menu.png"
+              alt="menu icon"
+              class="w-6 h-6"
+            />
+          </button>
+        </div>
+        <div
+          class="logo flex-grow md:flex-grow-0 md:w-auto text-center md:text-left"
+        >
+          <img src="./assets/img/logo.svg" alt="logo" class="mx-auto md:mx-0" />
+        </div>
+        <div class="menu hidden md:flex md:gap-[24px] cursor-pointer">
+          <ul class="flex gap-4">
             <li class="hover-active-text">Galeria zdjęć</li>
             <li class="hover-active-text">FaQ</li>
           </ul>
         </div>
-        <div class="contact cursor-pointer">
-          <button class="btn-primary">Zadzwoń do nas</button>
+
+        <div class="contact cursor-pointer md:block">
+          <button class="btn-primary hidden md:block">Zadzwoń do nas</button>
+          <div class="md:hidden">
+            <img
+              src="./assets/img/call-icon.png"
+              alt="call icon"
+              class="w-6 h-6"
+            />
+          </div>
         </div>
       </header>
       <main>
-        <div class="block-1 h-[800px] relative">
-          <div class="content mt-[120px] px-[120px] flex flex-col gap-[48px]">
+        <div class="block-1 h-[400px] md:h-[600px] lg:h-[800px] relative">
+          <div
+            class="content mt-8 md:mt-16 lg:mt-[120px] px-4 md:px-8 lg:px-[120px] flex flex-col gap-4 md:gap-8 lg:gap-[48px]"
+          >
             <h1
-              class="font-bebas w-1/2 text-[80px] font-normal leading-[84px] tracking-[-0.04em] text-left uppercase"
+              class="font-bebas w-full md:w-2/3 lg:w-1/2 text-[40px] md:text-[60px] lg:text-[80px] leading-[44px] md:leading-[64px] lg:leading-[84px] tracking-[-0.04em] text-center md:text-left uppercase"
             >
               Sprzedajemy samochody z europy
             </h1>
-            <p class="w-1/4 font-roboto-condensed">
+            <p
+              class="w-full md:w-2/3 lg:w-1/4 font-roboto-condensed text-center md:text-left"
+            >
               Kup komfortowy pojazd, aby każda podróż była wyjątkowym
               przeżyciem.
             </p>
-            <div class="btns flex gap-[24px] cursor-pointer">
+            <div
+              class="btns flex justify-around md:justify-start items-center mt-[170px] md:mt-0 md:flex-row md:items-start md:gap-8 lg:gap-[24px] cursor-pointer"
+            >
               <button class="btn-primary">Zobacz zdjęcia</button>
               <button class="btn-primary">Zadzwoń do nas</button>
             </div>
           </div>
           <img
-            class="absolute top-[-220px] right-[70px] z-[-100]"
+            class="hidden md:block absolute top-[-120px] md:top-[-220px] right-[30px] md:right-[70px] z-[-100]"
             src="./assets/img/bg-lines.webp"
             alt="lines"
           />
+
           <img
-            class="absolute top-[208px] left-[376px] z-[-10]"
+            class="absolute md:top-[208px] md:left-[376px] top-[170px] left-[20px] z-[-10]"
             src="./assets/img/bg-cars.webp"
             alt="cars"
           />
         </div>
-        <div class="block-2 h-[130px]">
-          <div class="content px-[88px] flex flex-col gap-[24px]">
-            <div>
+        <div class="block-2 h-[150px] md:h-[210px]">
+          <div
+            class="content px-4 md:px-8 lg:px-[88px] flex flex-col gap-4 md:gap-6 lg:gap-[24px]"
+          >
+            <div class="text-center hidden md:text-left md:block">
               <p class="text-active">Prezentacja firmy</p>
+            </div>
+            <div
+              class="text-center md:text-left flex flex-col gap-4 md:gap-6 lg:gap-[24px]"
+            >
               <p
-                class="font-bebas text-[40px] font-normal leading-[48px] tracking-[-0.04em] text-left uppercase"
+                class="font-bebas pt-[20px] md:pt-0 text-[24px] md:text-[32px] lg:text-[40px] leading-[32px] md:leading-[40px] lg:leading-[48px] tracking-[-0.04em] uppercase"
               >
                 Zobacz naszą Galerię zdjęć
               </p>
-            </div>
-            <div class="btns flex gap-[48px] cursor-pointer">
-              <p class="hover-active-text">Samochody osobowe</p>
-              <p class="hover-active-text">Samochody dostawcze</p>
+              <div
+                class="btns flex md:flex-row gap-4 md:gap-[24px] lg:gap-[48px] cursor-pointer"
+              >
+                <p class="hover-active-text py-2 md:py-0">Samochody osobowe</p>
+                <p class="hover-active-text py-2 md:py-0">
+                  Samochody dostawcze
+                </p>
+              </div>
             </div>
           </div>
         </div>
-        <div class="block-gallery max-w-[1440px] h-[600px]">
+
+        <div
+          class="block-gallery max-w-[1440px] h-[300px] md:h-[450px] lg:h-[600px]"
+        >
           <div
-            class="gallery-pictures flex items-center justify-between overflow-hidden gap-[64px] pl-[88px]"
+            class="gallery-pictures flex flex-col md:flex-row items-center justify-between overflow-hidden gap-4 md:gap-[64px] pl-4 md:pl-[88px]"
           >
             <img src="./assets/img/car-2.webp" alt="alfa romeo sports car" />
             <img src="./assets/img/car-1.webp" alt="maserati car" />
             <img src="./assets/img/car-3.webp" alt="any car" />
           </div>
-
           <div
-            class="dots flex gap-2 justify-center mt-[40px] hover-active-bg cursor-pointer"
+            class="dots flex gap-2 justify-center mt-4 md:mt-[40px] mb-4 md:mb-[40px] hover-active-bg cursor-pointer"
           >
             <div class="dot"></div>
             <div class="dot"></div>
@@ -94,23 +134,24 @@
         <div
           class="block-info h-[360px] bg-secondary flex items-center text-white"
         >
-          <div class="max-w-[1440px] px-[120px] flex gap-[80px]">
+          <div
+            class="max-w-[1440px] px-4 md:px-8 lg:px-[120px] flex flex-col md:flex-row gap-4 md:gap-[80px]"
+          >
             <div class="flex flex-col gap-[16px]">
               <p
-                class="font-bebas text-[25px] font-normal leading-[37.5px] tracking-[-0.03em] uppercase"
+                class="font-bebas text-[20px] md:text-[25px] leading-[30px] md:leading-[37.5px] tracking-[-0.03em] uppercase"
               >
                 Id nostrud enim esse consectetur in eu mollit fugiat aute. Velit
                 nulla commodo.
               </p>
               <p
-                class="font-roboto-condensed text-[14px] font-normal leading-[21px]"
+                class="font-roboto-condensed text-[12px] md:text-[14px] leading-[18px] md:leading-[21px]"
               >
                 Mauris varius ipsum mauris, rutrum lobortis magna efficitur a.
                 Donec egestas, nisl vehicula feugiat ornare, diam turpis
                 efficitur mi, ac venenatis eros ipsum ac arcu. Vestibulum et
                 [...]
               </p>
-
               <button class="inline-flex items-center">
                 Rozwiń
                 <img src="./assets/img/arrow.svg" alt="arrow" class="ml-2" />
@@ -118,20 +159,19 @@
             </div>
             <div class="flex flex-col gap-[16px]">
               <p
-                class="font-bebas text-[25px] font-normal leading-[37.5px] tracking-[-0.03em] uppercase"
+                class="font-bebas text-[20px] md:text-[25px] leading-[30px] md:leading-[37.5px] tracking-[-0.03em] uppercase"
               >
                 Id nostrud enim esse consectetur in eu mollit fugiat aute. Velit
                 nulla commodo.
               </p>
               <p
-                class="font-roboto-condensed text-[14px] font-normal leading-[21px]"
+                class="font-roboto-condensed text-[12px] md:text-[14px] leading-[18px] md:leading-[21px]"
               >
                 Mauris varius ipsum mauris, rutrum lobortis magna efficitur a.
                 Donec egestas, nisl vehicula feugiat ornare, diam turpis
                 efficitur mi, ac venenatis eros ipsum ac arcu. Vestibulum et
                 [...]
               </p>
-
               <button class="inline-flex items-center">
                 Rozwiń
                 <img src="./assets/img/arrow.svg" alt="arrow" class="ml-2" />
@@ -141,15 +181,15 @@
         </div>
       </main>
       <footer
-        class="max-w-[1440px] px-[120px] flex items-center text-white h-[72px] border-t border-white bg-secondary justify-between"
+        class="max-w-[1440px] px-4 md:px-8 lg:px-[120px] flex items-center text-white h-[72px] border-t border-white bg-secondary justify-between"
       >
         <p
-          class="font-roboto-condensed text-[16px] font-bold leading-[24px] text-center"
+          class="font-roboto-condensed text-[14px] md:text-[16px] font-bold leading-[20px] md:leading-[24px] text-center"
         >
           Cars Spot
         </p>
         <p
-          class="font-roboto-condensed text-[16px] font-normal leading-[24px] text-center underline"
+          class="font-roboto-condensed text-[14px] md:text-[16px] font-normal leading-[20px] md:leading-[24px] text-center underline"
         >
           Polityka prywatności
         </p>
