@@ -19,17 +19,17 @@
       >
         <div class="logo"><img src="./assets/img/logo.svg" alt="logo" /></div>
         <div class="menu">
-          <ul class="flex gap-[24px]">
-            <li>Galeria zdjęć</li>
-            <li>FaQ</li>
+          <ul class="flex gap-[24px] cursor-pointer">
+            <li class="hover-active-text">Galeria zdjęć</li>
+            <li class="hover-active-text">FaQ</li>
           </ul>
         </div>
-        <div class="contact">
+        <div class="contact cursor-pointer">
           <button class="btn-primary">Zadzwoń do nas</button>
         </div>
       </header>
       <main>
-        <div class="block-1 h-[825px] relative">
+        <div class="block-1 h-[800px] relative">
           <div class="content mt-[120px] px-[120px] flex flex-col gap-[48px]">
             <h1
               class="font-bebas w-1/2 text-[80px] font-normal leading-[84px] tracking-[-0.04em] text-left uppercase"
@@ -40,7 +40,7 @@
               Kup komfortowy pojazd, aby każda podróż była wyjątkowym
               przeżyciem.
             </p>
-            <div class="btns flex gap-[24px]">
+            <div class="btns flex gap-[24px] cursor-pointer">
               <button class="btn-primary">Zobacz zdjęcia</button>
               <button class="btn-primary">Zadzwoń do nas</button>
             </div>
@@ -56,21 +56,23 @@
             alt="cars"
           />
         </div>
-        <div class="block-2 h-[210px]">
-          <div class="content px-[88px]">
-            <p class="text-active">Prezentacja firmy</p>
-            <p
-              class="font-bebas text-[40px] font-normal leading-[48px] tracking-[-0.04em] text-left uppercase"
-            >
-              Zobacz naszą Galerię zdjęć
-            </p>
-            <div class="btns">
-              <p>Samochody osobowe</p>
-              <p>Samochody dostawcze</p>
+        <div class="block-2 h-[130px]">
+          <div class="content px-[88px] flex flex-col gap-[24px]">
+            <div>
+              <p class="text-active">Prezentacja firmy</p>
+              <p
+                class="font-bebas text-[40px] font-normal leading-[48px] tracking-[-0.04em] text-left uppercase"
+              >
+                Zobacz naszą Galerię zdjęć
+              </p>
+            </div>
+            <div class="btns flex gap-[48px] cursor-pointer">
+              <p class="hover-active-text">Samochody osobowe</p>
+              <p class="hover-active-text">Samochody dostawcze</p>
             </div>
           </div>
         </div>
-        <div class="block-gallery max-w-[1440px] h-[680px]">
+        <div class="block-gallery max-w-[1440px] h-[600px]">
           <div
             class="gallery-pictures flex items-center justify-between overflow-hidden gap-[64px] pl-[88px]"
           >
@@ -79,7 +81,9 @@
             <img src="./assets/img/car-3.webp" alt="any car" />
           </div>
 
-          <div class="dots flex gap-2 justify-center mt-[40px] mb-[40px]">
+          <div
+            class="dots flex gap-2 justify-center mt-[40px] hover-active-bg cursor-pointer"
+          >
             <div class="dot"></div>
             <div class="dot"></div>
             <div class="dot"></div>
@@ -87,35 +91,47 @@
             <div class="dot"></div>
           </div>
         </div>
-        <div class="block-info h-[360px] bg-secondary">
-          <div class="max-w-[1440px] px-[120px] flex">
-            <div>
-              <p>
+        <div
+          class="block-info h-[360px] bg-secondary flex items-center text-white"
+        >
+          <div class="max-w-[1440px] px-[120px] flex gap-[80px]">
+            <div class="flex flex-col gap-[16px]">
+              <p
+                class="font-bebas text-[25px] font-normal leading-[37.5px] tracking-[-0.03em] uppercase"
+              >
                 Id nostrud enim esse consectetur in eu mollit fugiat aute. Velit
                 nulla commodo.
               </p>
-              <p>
+              <p
+                class="font-roboto-condensed text-[14px] font-normal leading-[21px]"
+              >
                 Mauris varius ipsum mauris, rutrum lobortis magna efficitur a.
                 Donec egestas, nisl vehicula feugiat ornare, diam turpis
                 efficitur mi, ac venenatis eros ipsum ac arcu. Vestibulum et
                 [...]
               </p>
+
               <button class="inline-flex items-center">
                 Rozwiń
                 <img src="./assets/img/arrow.svg" alt="arrow" class="ml-2" />
               </button>
             </div>
-            <div>
-              <p>
+            <div class="flex flex-col gap-[16px]">
+              <p
+                class="font-bebas text-[25px] font-normal leading-[37.5px] tracking-[-0.03em] uppercase"
+              >
                 Id nostrud enim esse consectetur in eu mollit fugiat aute. Velit
                 nulla commodo.
               </p>
-              <p>
+              <p
+                class="font-roboto-condensed text-[14px] font-normal leading-[21px]"
+              >
                 Mauris varius ipsum mauris, rutrum lobortis magna efficitur a.
                 Donec egestas, nisl vehicula feugiat ornare, diam turpis
                 efficitur mi, ac venenatis eros ipsum ac arcu. Vestibulum et
                 [...]
               </p>
+
               <button class="inline-flex items-center">
                 Rozwiń
                 <img src="./assets/img/arrow.svg" alt="arrow" class="ml-2" />
@@ -125,10 +141,18 @@
         </div>
       </main>
       <footer
-        class="max-w-[1440px] px-[120px] flex h-[72px] border-t border-white bg-secondary justify-between"
+        class="max-w-[1440px] px-[120px] flex items-center text-white h-[72px] border-t border-white bg-secondary justify-between"
       >
-        <p>Cars Spot</p>
-        <p>Polityka prywatności</p>
+        <p
+          class="font-roboto-condensed text-[16px] font-bold leading-[24px] text-center"
+        >
+          Cars Spot
+        </p>
+        <p
+          class="font-roboto-condensed text-[16px] font-normal leading-[24px] text-center underline"
+        >
+          Polityka prywatności
+        </p>
       </footer>
     </div>
   </body>
